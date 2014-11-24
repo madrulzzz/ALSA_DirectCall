@@ -77,6 +77,7 @@ public class CustomListAdapter extends BaseAdapter {
         Name.setText(m.getName());
 
         // Designation
+
         Designation.setText("Designation: " + String.valueOf(m.getDesignation()));
 
         // File_NO
