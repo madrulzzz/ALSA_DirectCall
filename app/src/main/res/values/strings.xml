@@ -3,7 +3,7 @@
 
     <string name="app_name">ALSA</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Credits</string>
     <string name="title_activity_result_activity">result_activity</string>
 
 </resources>

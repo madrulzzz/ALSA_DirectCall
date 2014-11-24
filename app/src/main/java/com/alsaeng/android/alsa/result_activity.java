@@ -20,9 +20,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.Toast;
 import com.android.volley.VolleyLog;
-
-
 
 public class result_activity extends Activity {
 
@@ -30,7 +29,7 @@ public class result_activity extends Activity {
     private static final String TAG = result_activity.class.getSimpleName();
     private static final String TAG1 = "ALSA_LOG";
 
-    // Movies json url
+    // json url
 
     private static String url;
     private ProgressDialog pDialog;
@@ -165,6 +164,8 @@ public class result_activity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this.getBaseContext(), "Developed by Madhav Kishore, IT Engineer, ALSA Engineering and Construction L.L.C madhav.kishore@alsaeng.com",
+                    Toast.LENGTH_SHORT).show();
             return true;
         }
 

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class ALSA extends Activity {
@@ -94,6 +95,8 @@ public class ALSA extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this.getBaseContext(), "Developed by Madhav Kishore, IT Engineer, ALSA Engineering and Construction L.L.C madhav.kishore@alsaeng.com",
+                    Toast.LENGTH_SHORT).show();
             return true;
         }
 
