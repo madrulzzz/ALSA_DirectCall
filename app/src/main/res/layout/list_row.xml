@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dip" >
+
+    <!-- Thumbnail Image -->
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dip"
+        android:background="@drawable/modem2"
+        android:clickable="true" />
+
+    <!-- Movie Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        android:clickable="true" />
+
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="@dimen/rating"
+        android:clickable="true" />
+
+    <!-- File No -->
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="@color/genre"
+        android:textSize="15dip"
+        android:clickable="true" />
+
+    <!-- Phone-->
+    <TextView
+        android:id="@+id/releaseYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genre"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:clickable="true" />
+
+</RelativeLayout>
