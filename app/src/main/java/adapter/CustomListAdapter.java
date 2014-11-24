@@ -26,7 +26,7 @@ public class CustomListAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<Employee> EmpItems;
-    private static final String TAG1 = "ALSA_LOG";
+    private final String TAG1 = "ALSA_LOG";
 
 
     public CustomListAdapter(Activity activity, List<Employee> EmpItems) {

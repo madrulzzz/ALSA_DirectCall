@@ -18,7 +18,7 @@
     <!-- Movie Title -->
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
@@ -40,7 +40,7 @@
     <!-- File No -->
     <TextView
         android:id="@+id/genre"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rating"
         android:layout_toRightOf="@+id/thumbnail"
@@ -51,7 +51,7 @@
     <!-- Phone-->
     <TextView
         android:id="@+id/releaseYear"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/genre"
         android:layout_toRightOf="@+id/thumbnail"
