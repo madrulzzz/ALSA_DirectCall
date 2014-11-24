@@ -56,10 +56,10 @@ public class CustomListAdapter extends BaseAdapter {
 
 
 
-        TextView Name = (TextView) convertView.findViewById(R.id.title);
-        TextView Designation = (TextView) convertView.findViewById(R.id.rating);
-        TextView File_NO = (TextView) convertView.findViewById(R.id.genre);
-        TextView Phone_NO = (TextView) convertView.findViewById(R.id.releaseYear);
+        TextView Name = (TextView) convertView.findViewById(R.id.emp_name);
+        TextView Designation = (TextView) convertView.findViewById(R.id.emp_desg);
+        TextView File_NO = (TextView) convertView.findViewById(R.id.file_no);
+        TextView Phone_NO = (TextView) convertView.findViewById(R.id.phone_no);
         NetworkImageView img = (NetworkImageView) convertView.findViewById(R.id.thumbnail);
         Log.i(TAG1, "Declared all UI elements within List");
 
