@@ -1,24 +1,20 @@
 package adapter;
 
 
-import app.AppController;
+
 import model.Employee;
 import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.media.ThumbnailUtils;
 import android.net.Uri;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.alsaeng.android.alsa.R;
-import com.alsaeng.android.alsa.result_activity;
 import com.android.volley.toolbox.NetworkImageView;
 
 

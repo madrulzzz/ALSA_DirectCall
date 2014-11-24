@@ -7,29 +7,19 @@ import android.view.MenuItem;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-
 import adapter.CustomListAdapter;
 import app.AppController;
 import model.Employee;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.widget.ListView;
-
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 
 
@@ -42,7 +32,7 @@ public class result_activity extends Activity {
 
     // Movies json url
 
-    private static String url = "http://403.madrulzzz.com/test.php?emp_id=";
+    private static String url;
     private ProgressDialog pDialog;
     private List<Employee> empList = new ArrayList<Employee>();
     private ListView listView;
@@ -56,7 +46,7 @@ public class result_activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_activity);
         //Set Action Bar
-        setTitle("ALSA");
+        setTitle("ALSA Directory");
         getActionBar().setIcon(R.drawable.ic_launcher);
 
         //prepare php url query

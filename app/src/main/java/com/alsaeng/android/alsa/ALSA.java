@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,26 +26,41 @@ public class ALSA extends Activity {
         setContentView(R.layout.activity_als);
 
         Log.i(TAG1, "Set Title Bar to ALSA and New LOGO");
-        setTitle("ALSA");
+        setTitle("ALSA Directory");
         getActionBar().setIcon(R.drawable.ic_launcher);
 
         Name = (EditText) findViewById(R.id.editText);
         File_No = (EditText) findViewById(R.id.editText2);
-        Button Search = (Button) findViewById(R.id.button);
+        final Button Search = (Button) findViewById(R.id.button);
 
-        Search.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        Search.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent mt) {
                 // Do something in response to button click
-                Log.i(TAG1, "Search Button Clicked.. ");
-                String name = Name.getText().toString();
-                String file = File_No.getText().toString();
-                Intent to_list = new Intent(v.getContext(),result_activity.class);
-                Log.i(TAG1, "Keywords are being sent to the result_activity");
-                to_list.putExtra("NAME",name);
-                to_list.putExtra("FILENO",file);
-                startActivity(to_list);
+
+                switch(mt.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        // PRESSED
+                        Search.setBackgroundColor(getResources().getColor(R.color.Search_Pressed));
+                        return true;
+
+                    case MotionEvent.ACTION_UP:
+                        // RELEASED.
+                        Search.setBackgroundColor(getResources().getColor(R.color.Search_Not_Pressed));
+                        Log.i(TAG1, "Search Button Clicked.. ");
+                        String name = Name.getText().toString();
+                        String file = File_No.getText().toString();
+                        Intent to_list = new Intent(v.getContext(),result_activity.class);
+                        Log.i(TAG1, "Keywords are being sent to the result_activity");
+                        to_list.putExtra("NAME",name);
+                        to_list.putExtra("FILENO",file);
+                        startActivity(to_list);
+                        return true;
+                }
+                return true;
+
             }
         });
+
 
         //Click on Logo to go to website
         Log.i(TAG1, "Someone clicked on the Logo. Taking them to alsaeng.com");

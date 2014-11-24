@@ -3,6 +3,8 @@
 
     <color name="genre">#666666</color>
     <color name="year">#888888</color>
+    <color name="Search_Pressed">#FF184B9D</color>
+    <color name="Search_Not_Pressed">#ff17739e</color>
     <color name="list_divider">#d9d9d9</color>
     <color name="list_row_start_color">#ffbdbdbd</color>
     <color name="list_row_end_color">#ffbdbdbd</color>
