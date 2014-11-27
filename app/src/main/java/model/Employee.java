@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Employee {
     private String Designation, Name;
-    private int Phone_Number;
+    private String Phone_Number;
     private String file_no;
 
     public Employee() {
     }
 
-    public Employee(String Name, String Designation, int Phone_Number, String file_no)
+    public Employee(String Name, String Designation, String Phone_Number, String file_no)
     {
         this.Name = Name;
         this.Designation = Designation;
@@ -35,11 +35,11 @@ public class Employee {
         this.Designation = designation;
     }
 
-    public int getPhone_Number() {
+    public String getPhone_Number() {
         return Phone_Number;
     }
 
-    public void setPhone_Number(int number) {
+    public void setPhone_Number(String number) {
         this.Phone_Number = number;
     }
 

@@ -80,7 +80,7 @@ public class CustomListAdapter extends BaseAdapter {
         File_NO.setText("File No: " + String.valueOf(m.getFile_no()));
 
         // phone_No
-        Phone_NO.setText("Phone: +971" + String.valueOf(m.getPhone_Number()));
+        Phone_NO.setText("Phone: +971-" + String.valueOf(m.getPhone_Number()));
 
 
         //Tap to dial function

@@ -86,10 +86,11 @@ public class result_activity extends Activity {
 
                                 JSONObject obj = response.getJSONObject(i);
                                 Employee emp = new Employee();
-                                emp.setName(obj.getString("EMP_NAME"));
-                                emp.setDesignation(obj.getString("EMP_DESG"));
-                                emp.setFile_no(obj.getString("FILE_NO"));
-                                emp.setPhone_Number(obj.getInt("EMP_PHON"));
+                                emp.setName(obj.getString("empName"));
+                                emp.setDesignation(obj.getString("Profession"));
+                                emp.setFile_no(obj.getString("FileNo"));
+                                String Mob= obj.getString("MobileNo");
+                                emp.setPhone_Number(Mob.substring(1));
 
                                 empList.add(emp);
 
@@ -108,7 +109,7 @@ public class result_activity extends Activity {
                             emp.setName("No Entries Found");
                             emp.setDesignation("Not Found");
                             emp.setFile_no("Not Found");
-                            emp.setPhone_Number(26581551);
+                            emp.setPhone_Number("026-581551");
                             empList.add(emp);
                         }
 
